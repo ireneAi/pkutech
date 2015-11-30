@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<!--<title>标签旁的小图标-->
+	<link rel="Shortcut Icon" href="../image/favicon.ico" type="resource/img/x-icon"/>
+	<title>北大天公集团</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/all_file.js"></script>
+	<script>
+		window.onload = function() {
+			var btn_id =["al_btn1","al_btn2","al_btn3","cp_btn1"]//案例A标签ID
+			var al_body =["al_body1","al_body2","al_body3","cp_body1"]//案件详细内容ID
+			var position_box = document.getElementById("position_box");
+			var btn_id_list = [];
+			var body_id_list = [];
+			var body_height = document.body.scrollHeight || document.documentElement.scrollHeight;
+			position_box.style.height = body_height + "px";
+			for (var i = 0; i < btn_id.length; i++) {
+				btn_id_list.push(document.getElementById(btn_id[i]))
+				body_id_list.push(document.getElementById(al_body[i]))
+				btn_id_list[i].index = i;
+				btn_id_list[i].onclick = function(){
+					document.body.style.overflowY = "hidden";
+					position_box.style.display = "block"
+					body_id_list[this.index].style.display = "block";
+				}
+				body_id_list[i].getElementsByTagName("button")[0].onclick = position_box.onclick =function(){
+					for (var k = 0; k < btn_id.length; k++) {
+						body_id_list[k].style.display = "none";
+					}
+					position_box.style.display = "none";
+					document.body.style.overflowY = "auto";
+				}
+			};
+
+		}
+
+	</script>
+</head>
+<body>
+<!-- header star -->
+<div class="header">
+	<div class="header_top">
+		<a class="logo" href="../index.html">
+			<img src="../image/logo.png">
+		</a>
+		<ul>
+
+			<li><a href="joinUs_list.html">职位招聘</a></li>
+			<li><a href="contactUs4.html">联系我们</a></li>
+		</ul>
+	</div>
+</div>
+<!-- header end -->
+<!--top-->
+<div class="nav">
+	<div class="nav_menu">
+		<ul  class="nav_list">
+			<li><a class="in" href="finance.html">金融行业系统服务</a></li>
+			<li><a href="retail.html">零售流通行业系统服务</a></li>
+			<li><a href="electric.html">智能电网</a></li>
+			<li><a href="pro_environment.html">环境检测系统服务</a></li>
+			<li><a href="aboutUs_groupProflie.html">关于我们</a></li>
+			<!--<li><a href="big_date.html">大数据</a></li>-->
+		</ul>
+	</div>
+</div>
+<!-- header end -->
+<!-- main star -->
+<div class="pro_environment pro_IS">
+	<div class="pro_header">
+		<div class="header_main">
+			<h2>金融行业系统服务</h2>
+			<p style=text-align:justify>国有银行改制上市、城市商业银行上市、农村信用社跨区域发展、混业经营、私人银行、金融监管标准国际化等热点不断，整个银行业处于急剧的变化之中，呈现出狂飙突进的态势。 而银行业的每一步变革都离不开IT的支撑，每一次变革都会引发新一轮IT投资的冲动，抛出动辄上亿元的大单。 而通过互联网进行服务的消费群体快速膨胀，促进银行在电子渠道及支付方面的建设投入增加；银行金融创新产品和服务的推出，将直接拉动银行对风险管理系统的投资。 </p>
+		</div>
+	</div>
+</div>
+<div class="IS">
+	<div class="middle_main">
+
+		<h3>服务范围</h3>
+		<div class="jr_list">
+      <span>
+          <h4>1、业务咨询</h4>
+          <p>（1）全面风险管理咨询</p>
+          <p>（2）风险管理体系咨询</p>
+          <p>（3）风险模型开发咨询</p>
+          <p>（4）巴塞尔新资本协议</p>
+      </span>
+      <span>
+        <h4>2、客户化开发</h4>
+        <p>（1）客户化功能设计</p>
+        <p>（2）评级模型调整</p>
+        <p>（3）模型验证工具的客户化开发</p>
+      </span>
+      <span>
+        <h4>3、系统集成实施</h4>
+        <p>（1）系统集成实施</p>
+        <p>（2）系统实施培训</p>
+        <p>（3）模型检验相关培训</p>
+        <p>（4）协助系统验收</p>
+        <p>（5）协助系统试运行</p>
+      </span>
+      <span>
+    	<h4>4、售后服务</h4>
+        <p>（1）运维服务</p>
+        <p>（2）数据分析服务</p>
+        <p>（3）模型改进服务</p>
+        <p>（4）应用挖掘服务</p>
+      </span>
+		</div>
+		<div class="clear"></div>
+		<h3>我们的优势</h3>
+		<p>凭借长期在日本从事金融信息系统的开发、实施及维护的经验以及一支具备丰富经验和专业知识的团队，与日本NTTDATA、日立、富士通、瑞穗信息综研等顶级IT企业携手，结合中国银行业的现状，推出一系列面向国内银行的软硬件产品和解决方案。</p>
+		<h3>成功案例</h3>
+		<a id="al_btn1"><dl>
+				<dt><img src="../image/IS/al_pic1.png"></dt>
+				<dd>某银行内部评级产品</dd>
+			</dl>
+		</a>
+		<div id="position_box" class="position_100"></div>
+		<div id="al_body1" class="show_box">
+			<h3>某银行内部评级产品</h3>
+			<h4>系统特点</h4>
+			<p> (1) 全面满足《商业银行信用风险内部评级体系监管指引》的要求。</p>
+			<p>(2) 预测评价模型，组合使用定量分析与定性分析确保评级结果客观，准确。</p>
+			<p>(3) 灵活的系统框架可嵌入用户自由模型和其他外部模型。</p>
+			<p>(4) 以模型评级为主导，辅以人工调整，确保评级结果的实用性和准确性。</p>
+			<p>(5) 细化客户类别，针对不同客户适用不同的评级方式，提高针对性。</p>
+			<p>(6) 规范的评级流程，标准的操作步骤。</p>
+			<p>(7) 精细化的权限控制，杜绝人为不当操控评级结果。</p>
+			<p>(8) 自动生成行内部评级报表，无缝连接到行内现有系统。</p>
+
+			<h4>应用范围</h4>
+			<p>(1) 希望在信贷业务中更客观地掌握客户信用评级风险大小的银行。</p>
+			<p>(2) 希望在信用评级中引入计量模型的银行。</p>
+			<p>(3) 希望建设信贷系统或信用风险管理系统的银行。</p>
+			<button class="btn btn-default" >返回</button>
+		</div>
+
+		<a id="al_btn2"><dl>
+				<dt><img src="../image/IS/al_pic2.png"></dt>
+				<dd>某公司资产负债管理（ALM）产品</dd>
+			</dl></a>
+		<div id="al_body2" class="show_box">
+			<h3 class="modal-title"  >某公司资产负债管理（ALM）产品</h3>
+			<h4>系统特点</h4>
+			<p>(1) 广泛应对存款，贷款，债券，同业拆借和金融衍生品等产品。</p>
+			<p>(2) 实现银行账户和交易账户的统一管理。</p>
+			<p>(3) 精确到每笔交易，确保对风险的把握更加合理和精确。</p>
+			<p>(4) 实现人民币，美元等多种货币单位的资产负责分析。</p>
+			<p>(5) 可以对期间损益模拟，压力测试进行灵活的情景设定，投资组合设定和计算精度设定。</p>
+			<p>(6) 采用世界先进的网络计算技术，大幅度提高运算速度并具备灵活的扩展能力。</p>
+			<p>(8) 可实现符合《商业银行资本管理办法》要求的风险计算。</p>
+
+
+			<h4>作用领域</h4>
+			<p>(1) 通过现金流量的分析和预测，改进流动性管理方法和手段。</p>
+			<p>(3) 通过利率敏感性缺口和持续期缺口分析等向银行提供利率风险量化识别方法，识别工具和对策分析手段。</p>
+			<p>(3) 建立利率风险量分析工具。</p>
+			<p>(4) 提供符合我国银行监管当局和外部审计机构要求的统计报表，满足银行对内对外资产负责信息披露的要求。</p>
+			<button type="button"  class="btn btn-default" data-dismiss="modal">返回</button>
+			<div class="clear"></div>
+		</div>
+		<a   id="al_btn3"><dl>
+				<dt><img src="../image/IS/al_pic3.png"></dt>
+				<dd>某公司信用风险加权资产(RWA)产品</dd>
+			</dl></a>
+		<div id="al_body3" class="show_box">
+			<h3 class="modal-title" >某公司信用风险加权资产(RWA)产品</h3>
+			<h4>系统特点</h4>
+			<p>(1) 允许应对巴塞尔新资本协议要求，中国监管当局要求，适应中国商业银行经营管理特点和业务特点。</p>
+			<p>(2) 拥有国际金融机构丰富的案例和实践经验。</p>
+			<p>(3) 能够实现对各种交易和计算参数进行变更的模拟操作。</p>
+			<p>(4) 通过导入其他解决方案提供的市场风险和操作风险计算结果，根据中国现行法规计算资本充足率，并按照中国银监会的报表要求进行信息披露。</p>
+
+			<h4>作用领域</h4>
+			<p>(1) 风险加权资产（Risk Weighted Asset）是指对银行的资产加以分类，根据不同类别资产的风险性质确定不同的风险系数，以这种风险系数为权重求得的资产。</p>
+			<p>(2) 巴塞尔新资本协议第一支柱要求商业银行必须维持最低资本充足率要求，从而抵御各种风险。为配合新资本协议的合规达标，风险加权资产计量平台的建设是必不可少的。</p>
+			<button type="button"  class="btn btn-default" data-dismiss="modal">返回</button>
+			<div class="clear"></div>
+		</div>
+		<div class="clear"></div>
+		<h3>产品展示</h3>
+		<a id="cp_btn1"><dl>
+				<dt><img src="../image/IS/cp_pic1.png"></dt>
+				<dd>手掌静脉仪</dd>
+			</dl>
+		</a>
+		<div id="cp_body1" class="show_box">
+			<h3>手掌静脉仪</h3>
+			<img class="cp_img" src="../image/IS/pro_1.jpg">
+			<p>
+				手掌静脉身份识别是通过近红外线读取手掌静脉的模式数据，与预先登记的手掌静脉数据进行对比，确认本人身份的生物识别技术。
+			</p>
+			<!--<div class="clearfix"></div>-->
+			<div class="sm">
+             <span>
+            <h4>特性</h4>
+                 <h5>(1) 非接触型</h5>
+            <p class="nav_img">卫生，使用者的心理抵触感较小，特别适合在流动人员多的场合使用。</p>
+                 <h5>(2) 动作简单自然</h5>
+          <p class="nav_img">只需把手掌放于传感器上方，即可实现本人身份识别。</p>
+                 <h5>(3) 识别精度高</h5>
+          <p class="nav_img">由于手掌静脉较粗，数量较多，可以实现高精度的识别。</p>
+          <p class="nav_img">本人拒绝率在0.01%以下时，别人的接受率在0.00008%以下。</p>
+                 <h5>(4) 安全性高/对应率高</h5>
+          <p class="nav_img">由于手掌静脉为人体内部信息，所以伪造特别困难。同时几乎所有的人都可以使用。</p>
+          </span>
+           <span>
+            <h4>技术参数</h4>
+            <p class="nav_img">工作电压范围：9V-20V       </p>
+            <p class="nav_img">信道间隔：200kHz       </p>
+            <p class="nav_img">频率范围：470MHz～510MHz </p>
+            <p class="nav_img">信道数量： 100 </p>
+            <p class="nav_img">发射功率： ≤50mW </p>
+            <p class="nav_img">空中速率： 9600bps </p>
+            <p class="nav_img">端口通信速率：2400bps </p>
+            <p class="nav_img">消耗功率： ≤0.2W（静态）≤0.5W（动态） </p>
+            <p class="nav_img">传输距离： 500～700m（可视）    1200（空旷） </p>
+            <p class="nav_img">环境条件： 标准工作温度为-25℃～+70℃ </p>
+            <p class="nav_img">极限工作温度：-40℃～+85℃ </p>
+            <p class="nav_img">工作湿度： ≤95% </p>
+            <p class="nav_img">设计寿命: 10年以上 </p>
+            </span>
+			</div>
+				<button class="btn btn-default" >返回</button>
+			<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="footer">
+	<div class="width_auto">
+			<span>
+				2015版权所有 PUKTECH
+			</span>
+		<ul>
+			<li><a href="law.html">法律声明</a></li>
+			<li><a href="site_map.html">网站地图</a></li>
+		</ul>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<title>北大天公集团</title>
+	<link rel="Shortcut Icon" href="../image/favicon.ico" type="resource/img/x-icon"/>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+	<script type="text/javascript">
+		window.onload = function(){
+			var a_list = document.getElementById("honor_list").getElementsByTagName("a");
+			var img_boxp = document.getElementById("img_box")
+			var img_box = img_boxp.getElementsByTagName("img")[0];
+			var body_Height = document.body.clientHeight || document.documentElement.clientHeight;
+			var body_scroll = document.body.scrollTop || document.documentElement.scrollTop;
+			img_boxp.style.left = a_list[0].offsetLeft + a_list[0].offsetWidth + "px";
+			var img_src = ["9001","27001","fmzl1","fmzl2","syxx1","syxx2","syxx3","syxx4","syxx5","syxx6","syxx7","syxx8","syxx9","syxx10","syxx11","znpdxi","znpdxi1"] //图片名称
+			for (var i = 0; i<a_list.length; i++){
+				a_list[i].index = i;
+				a_list[i].onmouseover = function(){
+					img_boxp.style.display = "block"
+					img_boxp.getElementsByTagName("h5")[0].innerHTML = a_list[this.index].innerHTML;//更改图片名称
+					img_box.src="../image/about_us/" + img_src[this.index] + ".jpg";//更改图片路径
+				}
+				a_list[i].onmouseout = function(){
+					img_boxp.style.display = "none"
+				}
+			}
+		}
+	</script>
+</head>
+
+<body>
+<!-- header star -->
+<div class="header">
+	<div class="header_top">
+		<a class="logo" href="../index.html">
+			<img src="../image/logo.png">
+		</a>
+		<ul>
+
+			<li><a href="joinUs_list.html">职位招聘</a></li>
+			<li><a href="contactUs4.html">联系我们</a></li>
+		</ul>
+	</div>
+</div>
+<!-- nav star -->
+<div class="nav">
+	<div class="nav_menu">
+		<ul  class="nav_list">
+			<li><a href="finance.html">金融行业系统服务</a></li>
+			<li><a href="retail.html">零售流通行业系统服务</a></li>
+			<li><a href="electric.html">智能电网</a></li>
+			<li><a href="pro_environment.html">环境检测系统服务</a></li>
+			<li><a class="in" href="aboutUs_groupProflie.html">关于我们</a></li>
+			<!--<li><a href="big_date.html">大数据</a></li>-->
+		</ul>
+	</div>
+</div>
+
+<!-- header end -->
+<!-- main star -->
+<div class="subpage_banner">
+	<img src="../image/about_us/aboutUs_banner5.jpg">
+</div>
+<div class="breadcrumbs">
+	<a href="../index.html">首页</a> -> 关于我们
+</div>
+<div class="about_us_body">
+	<div class="left_sidebar">
+		<ul>
+			<li><a href="aboutUs_groupProflie.html">集团概况</a></li>
+			<li><a href="aboutUs_originator.html">创始人</a></li>
+			<li><a href="aboutUs_cultur.html">企业文化</a></li>
+			<li><a href="aboutUs_partner.html">合作伙伴</a></li>
+			<li><a class="in" href="aboutUs_honor.html">资质与专利</a></li>
+			<!--<li><a href="aboutUs_government.html">政府支持</a></li>-->
+			<li><a href="aboutUs_staff.html">员工天地</a></li>
+		</ul>
+	</div>
+	<div class="middle_main">
+		<h2>资质与专利</h2>
+		<p>深厚的技术积累和商业经验，优秀的人才队伍和管理体制，使集团得到了政府、行业主管单位的认可，并已获得许多令业界瞩目的重要资质及专利证书。  </p>
+		<h3>资质认证</h3>
+		<div id="honor_list" class="link_honor">
+			<div id="img_box">
+				<h5>(1) ISO9001 质量认证体系</h5>
+				<img src="../image/about_us/9001.jpg" >
+			</div>
+			<a>(1) ISO9001 质量认证体系  </a>
+			<a>(2) ISO27000质量管理体系认证 </a>
+
+			<h3>发明专利</h3>
+
+			<a>(1) 基于手掌静脉认证的门禁系统及其认证方法</a>
+			<a>(2) 基于手掌静脉认证的安保柜开锁系统及其方法 </a>
+
+			<h3>实用新型专利</h3>
+
+			<a>(1) 基于TG-INWICOS的Ⅱ型采集器通信装置</a>
+			　　<a>(2) 基于TG-Inwicos的配电自动化通信装置</a>
+			　　<a>(3) 基于TG-Inwicos的配电自动化信息采集系统中的电路模块</a>
+			　　<a>(4) 基于WisReed无线通信装置的自动抄表系统</a>
+			　　<a>(5) 基于静脉认证的门禁系统</a>
+			　　<a>(6) 基于静脉认证的银行授权系统</a>
+			　　<a>(7) 基于静脉识别的安保柜开锁系统</a>
+			　　<a>(8) 基于手掌静脉认证的安保柜开锁系统</a>
+			　　<a>(9) 基于手掌静脉认证的门禁系统</a>
+			　　<a>(10) 基于手掌静脉认证的银行授权授信系统</a>
+			　　<a>(11) 微功率无线通信装置</a>
+
+			<h3>计算机软件著作权</h3>
+
+			<a>(1) 智能用电信息采集系统V3.0</a>
+			　　		<a>(2) 智能配电信息采集系统V2.0 </a>
+		</div>
+	</div>
+	<!--<div class="right_sidebar">
+		<div class="contact_us">
+			<h3>联系我们</h3>
+			<h5>北京天公瑞丰科技有限公司</h5>
+			<p>联系人：刘明珠</p>
+			<p> 邮箱：liumingzhu@pkutech.cn</p>
+			<h5>天公(山东)信息科技有限公司</h5>
+			<p>联系人：张玉真</p>
+			<p>邮箱： zhangyuzhen@pkutech.cn</p>
+			<h5>无锡天公瑞丰科技有限公司</h5>
+			<p>联系人：倪芳芳</p>
+			<p>邮箱： nifangfang@pkutech.cn</p>
+			<h5>大连天公瑞丰科技有限公司</h5>
+			<p>联系人：潘玉洋</p>
+			<p>邮箱：panyuyang@pkutech.cn</p>
+		</div>
+	</div>-->
+</div>
+
+<!-- main end -->
+<!-- footer star -->
+<div class="footer">
+	<div class="width_auto">
+			<span>
+				2015版权所有 PKUTECH
+			</span>
+		<ul>
+			<li><a href="law.html">法律声明</a></li>
+			<li><a href="site_map.html">网站地图</a></li>
+		</ul>
+	</div>
+</div>
+<!-- footer end -->
+
+</body>
+</html>

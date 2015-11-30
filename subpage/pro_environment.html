@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<!--<title>标签旁的小图标-->
+	<link rel="Shortcut Icon" href="../image/favicon.ico" type="resource/img/x-icon"/>
+	<title>北大天公集团</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/all_file.js"></script>
+	<script>
+		window.onload = function(){
+			var btn_id =["al_btn1","al_btn2"]//案例A标签ID
+			var al_body =["al_body1","al_body2"]//案件详细内容ID
+			var position_box = document.getElementById("position_box");
+			var btn_id_list = [];
+			var body_id_list = [];
+			var body_height = document.body.scrollHeight || document.documentElement.scrollHeight;
+			position_box.style.height = body_height + "px";
+			for (var i = 0; i < btn_id.length; i++) {
+				btn_id_list.push(document.getElementById(btn_id[i]))
+				body_id_list.push(document.getElementById(al_body[i]))
+				btn_id_list[i].index = i;
+				btn_id_list[i].onclick = function(){
+					document.body.style.overflowY = "hidden";
+					position_box.style.display = "block"
+					body_id_list[this.index].style.display = "block";
+				}
+				body_id_list[i].getElementsByTagName("button")[0].onclick = position_box.onclick =function(){
+					for (var k = 0; k < btn_id.length; k++) {  body_id_list[k].style.display = "none";}
+					position_box.style.display = "none";
+					document.body.style.overflowY = "auto";
+				}
+			};
+		}
+	</script>
+</head>
+<body>
+<!-- header star -->
+<div class="header">
+	<div class="header_top">
+		<a class="logo" href="../index.html">
+			<img src="../image/logo.png">
+		</a>
+		<ul>
+
+			<li><a href="joinUs_list.html">职位招聘</a></li>
+			<li><a href="contactUs4.html">联系我们</a></li>
+		</ul>
+	</div>
+</div>
+<!-- header end -->
+<!--top-->
+<div class="nav">
+	<div class="nav_menu">
+		<ul  class="nav_list">
+			<li><a href="finance.html">金融行业系统服务</a></li>
+			<li><a href="retail.html">零售流通行业系统服务</a></li>
+			<li><a href="electric.html">智能电网</a></li>
+			<li><a class="in" href="pro_environment.html">环境检测系统服务</a></li>
+			<li><a href="aboutUs_groupProflie.html">关于我们</a></li>
+		<!--	<li><a href="big_date.html">大数据</a></li>-->
+		</ul>
+	</div>
+</div>
+<!-- main star -->
+<div class="pro_environment">
+	<div class="pro_header">
+		<div class="header_main">
+			<h2>环境检测系统服务</h2>
+			<p>环保事业部建立了空气质量监测、治理、监控的整套解决方案。</p>
+			<p>空气质量监测系统可实现区域空气质量的在线自动监测，能全天候、连续、自动地监测环境空气中的二氧化硫、二氧化氮、臭氧和可吸入颗粒物的实时变化情况，迅速、准确的收集、处理监测数据，能及时、准确地反映区域环境空气质量状况及变化规律。</p>
+			<p>空气质量治理系统是根据监测系统的监测结果，由环保部门检查、要求有环保设备运行，确定设备设施的运行效果可以满足要求，并保证其有效运行。</p>
+			<p>空气质量监控系统是有针对性的除尘设备投入运行后，针对除尘设备的效果进行实时监控，确保其能有效地抑制颗粒污染物的排放。</p>
+		</div>
+	</div>
+</div>
+<div class="IS">
+	<div class="middle_main">
+		<h3>空气质量监测监控范围</h3>
+		<p>可有效监测PM10、PM5及PM2.5，包含SO<sub>2</sub> 、HF、SF<sub>4</sub> 、SOF<sub>2</sub> 、OF<sub>4</sub> 、 SO<sub>2</sub>F<sub>2</sub>、S<sub>2</sub>F<sub>10</sub>、SiF<sub>4</sub> 、H<sub>2</sub>S、H<sub>2</sub>O、CF<sub>4</sub>、 NO<sub>2</sub> 、O<sub>3</sub> 、CO 以及空气颗粒物（TSP）。</p>
+
+		<table border="1"  class="hb" cellpadding="0" cellspacing="1" style="display:block; float:right; text-align:center;margin-right:100px;">
+			<col width="72" span="3">
+			<tr height="35">
+				<td width="100" height="35" bgcolor="#FFFFFF">主要监测参数</td>
+				<td width="100" bgcolor="#FFFFFF">检测范围</td>
+				<td width="100" bgcolor="#FFFFFF">分辨率</td>
+			</tr>
+			<tr height="20">
+				<td width="100" height="20" bgcolor="#FFFFFF">二氧化硫</td>
+				<td width="100" bgcolor="#FFFFFF">0-2ppm</td>
+				<td width="100" bgcolor="#FFFFFF">0.001ppm</td>
+			</tr>
+			<tr height="20">
+				<td width="100" height="20" bgcolor="#FFFFFF">二氧化氮</td>
+				<td width="100" bgcolor="#FFFFFF">0-2ppm</td>
+				<td width="100" bgcolor="#FFFFFF">0.001ppm</td>
+			</tr>
+			<tr height="20">
+				<td width="100" height="20" bgcolor="#FFFFFF">臭氧</td>
+				<td width="100" bgcolor="#FFFFFF">0-5ppm</td>
+				<td width="100" bgcolor="#FFFFFF">0.001ppm</td>
+			</tr>
+			<tr height="20">
+				<td width="100" height="20" bgcolor="#FFFFFF">一氧化碳</td>
+				<td width="100" bgcolor="#FFFFFF">0-50ppm</td>
+				<td width="100" bgcolor="#FFFFFF">0.1ppm</td>
+			</tr>
+			<tr height="20">
+				<td width="100" height="20" bgcolor="#FFFFFF">硫化氢</td>
+				<td width="100" bgcolor="#FFFFFF">0-2ppm</td>
+				<td width="100" bgcolor="#FFFFFF">0.01ppm</td>
+			</tr>
+			<tr height="20">
+				<td width="100" height="20" bgcolor="#FFFFFF">氟化氢</td>
+				<td width="100" bgcolor="#FFFFFF">0-2ppm</td>
+				<td width="100" bgcolor="#FFFFFF">0.01ppm</td>
+			</tr>
+		</table>
+		<h3>我们的优势</h3>
+		<p>可直读颗粒物质量浓度（mg/m<sup>3</sup>），1分钟出结果，或根据用户需要任意设定采样间；</p>
+		<p>国外核心技术与国内技术有机结合，产品性价比高；</p>
+		<p>产品操作简单，维护工作量小，费用较低；</p>
+		<p>测量快速、准确、检测灵敏度高；</p>
+		<p>设计了自校系统,仪器性能稳定可靠；</p>
+		<p>具有气幕屏蔽及洁净气自清洗功能，确保光学系统不受污染；</p>
+		<p>具有与计算机双向通讯功能，可通过PC机进行数据处理，打印出曲线及表格；</p>
+		<p>现场数据实时传送，远程故障诊断；</p>
+		<p>具有颗粒物浓度连续监测、定时采样以及粉尘浓度超标报警等多种功能；</p>
+		<h3>应用案例</h3>
+		<a id="al_btn1"><dl>
+				<dt><img src="../image/pr_al_pic1.png"></dt>
+				<dd>应用案例一</dd>
+			</dl>
+		</a>
+		<div id="position_box" class="position_100"></div>
+		<div id="al_body1" class="show_box">
+			<h3>应用案例一</h3>
+			<img class="yyal" src="../image/environment1.png" />
+			<p style=text-align:justify> 实现了空气质量的区域监测，能全天候、连续、自动地监测。该区域内实现布点7个，覆盖10km范围内的区域，其数据采样、分析结果、实时变化情况通过GPRS上传到上位机。</p>
+			<button class="btn btn-default" >返回</button>
+		</div>
+
+		<a id="al_btn2"><dl>
+				<dt><img src="../image/pr_al_pic2.png"></dt>
+				<dd>应用案例二</dd>
+			</dl></a>
+		<div id="al_body2" class="show_box">
+			<h3 class="modal-title" id="myModalLabel" >应用案例二</h3>
+			<img class="yyal" src="../image/environment2.png" />
+			<p style=text-align:justify>实现了空气质量的区域监测，能全天候、连续、自动地监测。</p>
+			<button type="button"  class="btn btn-default" data-dismiss="modal">返回</button>
+		</div>
+	</div>
+</div>
+<!-- main end -->
+<!-- footer star -->
+<!--tail-->
+<div class="footer">
+	<div class="width_auto">
+			<span>
+				2015版权所有 PKUTECH
+			</span>
+		<ul>
+			<li><a href="law.html">法律声明</a></li>
+			<li><a href="site_map.html">网站地图</a></li>
+		</ul>
+	</div>
+</div>
+</body>
+</html>

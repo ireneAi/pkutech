@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<!--<title>标签旁的小图标-->
+	<link rel="Shortcut Icon" href="../image/favicon.ico" type="resource/img/x-icon"/>
+	<title>北大天公集团</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/all_file.js"></script>
+</head>
+</head>
+<script>
+	window.onload = function() {
+		var btn_id =["al_btn1","al_btn2","cp_btn1","cp_btn2","cp_btn3","cp_btn4","cp_btn5"]//案例A标签ID
+		var al_body =["al_body1","al_body2","cp_body1","cp_body2","cp_body3","cp_body4","cp_body5"]//案件详细内容ID
+		var position_box = document.getElementById("position_box");
+		var btn_id_list = [];
+		var body_id_list = [];
+		var body_height = document.body.scrollHeight || document.documentElement.scrollHeight;
+		position_box.style.height = body_height + "px";
+		for (var i = 0; i < btn_id.length; i++) {
+			btn_id_list.push(document.getElementById(btn_id[i]))
+			body_id_list.push(document.getElementById(al_body[i]))
+			btn_id_list[i].index = i;
+			btn_id_list[i].onclick = function(){
+				document.body.style.overflowY = "hidden";
+				position_box.style.display = "block"
+				body_id_list[this.index].style.display = "block";
+			}
+			body_id_list[i].getElementsByTagName("button")[0].onclick = position_box.onclick =function(){
+				for (var k = 0; k < btn_id.length; k++) {
+					body_id_list[k].style.display = "none";
+				}
+				position_box.style.display = "none";
+				document.body.style.overflowY = "auto";
+			}
+		};
+
+	}
+
+</script>
+<body>
+<!-- header star -->
+<div class="header">
+	<div class="header_top">
+		<a class="logo" href="../index.html">
+			<img src="../image/logo.png">
+		</a>
+		<ul>
+
+			<li><a href="joinUs_list.html">职位招聘</a></li>
+			<li><a href="contactUs4.html">联系我们</a></li>
+		</ul>
+	</div>
+</div>
+<!-- header end -->
+<!--top-->
+<div class="nav">
+	<div class="nav_menu">
+		<ul  class="nav_list">
+			<li><a href="finance.html">金融行业系统服务</a></li>
+			<li><a href="retail.html">零售流通行业系统服务</a></li>
+			<li><a class="in" href="electric.html">智能电网</a></li>
+			<li><a href="pro_environment.html">环境检测系统服务</a></li>
+			<li><a href="aboutUs_groupProflie.html">关于我们</a></li>
+			<!--<li><a href="big_date.html">大数据</a></li>-->
+		</ul>
+	</div>
+</div>
+<!-- header end -->
+<!-- main star -->
+<div class="pro_environment electric">
+	<div class="pro_header">
+		<div class="header_main">
+			<h2>智能电网</h2>
+			<p style=text-align:justify>PKUTECH可为各地电网公司进行信息采集，提供无线通信技术及解决方案的咨询、开发、实施和运维服务。已加入电力行业电测量标准化委员会、电机工程学会总会会员单位，并已成为电磁干扰专业委员会委员。</p>
+			<p style=text-align:justify>集团成功自主研发新一代的智能自组网通信协议—TG-Inwicos。首创性地将深度优先路由检索算法理论在自组网领域成功地实现。可自动快速构建大规模网络并在网络出现故障时实现快速自我修复。实现“实时的、一次性100%准确的”数据传输。</p>
+		</div>
+	</div>
+</div>
+<div class="IS">
+	<div class="middle_main">
+
+		<h3>特点</h3>
+		<h4>（1）快速自动构建大型网络</h4>
+		<p>现存的协议（如ZigBee）只能适应智能家居等小规模网络，50节点以上时通信效率及可靠性显著降低。基于TG-Inwicos协议可构建能够实现稳固通信的大型网络。它适用于大型智能配电网络及智能电表网络等基础设施。</p>
+		<h4>（2）快速自我修复</h4>
+		<p>因外部环境干扰网络出现故障时，每个设备都可以快速恢复或保持正常通信。</p>
+		<h4>（3）可适用于有线、无线等各种网络</h4>
+		<p>可适用于多种通信媒体——任何无线通信设备或有线通信设备。无须设定安装即可实现通信节点的增加和删除。在有线网络中应用AdHoc技术具有世界先进水平。</p>
+		<h3>成功案例</h3>
+		<a id="al_btn1"><dl>
+				<dt><img src="../image/IS/ele_al_pic1.png"></dt>
+				<dd>青岛崂山</dd>
+			</dl></a>
+		<div id="position_box" class="position_100"></div>
+		<div id="al_body1" class="show_box">
+			<h3 class="modal-title" >青岛崂山</h3>
+			<p style=text-align:justify>青岛崂山地区地形复杂，山地居多，对集中器GPRS信号传输影响较大；同时由于电力载波自身的缺陷，导致抄表率受到一定影响。</p>
+			<p style=text-align:justify>TG无线抄表系统集中器上行通信为GPRS与主站进行信息交换，下行通信采用微功率无线与智能电表采集器（采集器通过485线与电表连接）进行信息交换。挂网实验覆盖到温哥华小区134栋楼，共2台集中器、2台中继器、81台采集器、1063台电能表。</p>
+			<h4>特点</h4>
+			<p>（1）用采集器替换成本较高的集中器，可减少集中器的使用个数。</p>
+			<p>（2）GPRS的使用成本费随之下降，减轻集抄系统的负担。</p>
+			<p>（3）实测抄成功表率可以达到100％。</p>
+			<p>（4）数据实时性、准确性高。</p>
+			<button class="btn btn-default" >返回</button>
+			<div class="clear"></div>
+		</div>
+		<a  id="al_btn2"><dl>
+				<dt><img src="../image/IS/ele_al_pic2.png"></dt>
+				<dd>辽宁锦州</dd>
+			</dl></a>
+		<div id="al_body2" class="show_box">
+			<h3 class="modal-title" >辽宁锦州</h3>
+			<p style=text-align:justify>锦州地区气候多变，在现今使用的PLC通信方式中易受变频水泵或雷电影响，对于条件较差的地区抄表率约为83% 。</p>
+			<p style=text-align:justify> 无线抄表系统集中器上行通信经GPRS与主站进行信息交换，下行通信以微功率无线与智能电表进行信息交换。挂网实验已完成金辉大厦、海逸半岛小区等1000台以上改造。</p>
+			<h4>特点</h4>
+			<p>（1）集中器到电表通过无线传输，施工运维简便。</p>
+			<p>（2）适合用电环境复杂区域。</p>
+			<p>（3）数据实时性、准确性高。</p>
+			<p>（4）无线抄表成功率可达到100％。</p>
+			<button type="button"  class="btn btn-default" data-dismiss="modal">返回</button>
+			<div class="clear"></div>
+		</div>
+		<div class="clear"></div>
+		<h3>产品展示</h3>
+		<a  id="cp_btn1"><dl>
+				<dt><img src="../image/IS/cp_pic2.png"></dt>
+				<dd>微功率无线通信模块</dd>
+			</dl></a>
+		<div id="cp_body1" class="show_box">
+			<h3 class="modal-title" >微功率无线通信模块</h3>
+			<img src="../image/IS/pro_2.jpg">
+			<p style=text-align:justify>TG-Inwicos微功率无线通信模块是集中器、采集器（或电能表）设备的核心通信单元，运用深度优先算法和分布式优化路由技术，使网络健壮（鲁棒）性、自组性、自愈性好。在大规模、高密度部署场合下传输信息快，具有可靠的通信能力和抗干扰能力。</p>
+			<!--<div class="clearfix"></div>-->
+			<div class="sm">
+             <span>
+            <h4>特性</h4>
+            <p class="nav_img">支持互联互通标准协议。</p>
+          <p class="nav_img">全面支持DL/T 645-2007。</p>
+          <p class="nav_img">全面支持Q/GDW 1376.2-2013。</p>
+          <p class="nav_img">模块与电表通信采用串行异步。</p>
+          <p class="nav_img">可对无线模块的软件进行升级。</p>
+          <p class="nav_img">支持异常事件上报。</p>
+          <p class="nav_img">地址管理,信道转换,冲突避让,自动路由。</p>
+          <p class="nav_img">符合有关标准，便于安装维护，运行稳定。</p>
+          </span>
+           <span>
+            <h4>技术参数</h4>
+            <p class="nav_img">工作电压范围：9V-20V       </p>
+            <p class="nav_img">信道间隔：200kHz       </p>
+            <p class="nav_img">频率范围：470MHz～510MHz </p>
+            <p class="nav_img">信道数量： 100 </p>
+            <p class="nav_img">发射功率： ≤50mW </p>
+            <p class="nav_img">空中速率： 9600bps </p>
+            <p class="nav_img">端口通信速率：2400bps </p>
+            <p class="nav_img">消耗功率： ≤0.2W（静态）≤0.5W（动态） </p>
+            <p class="nav_img">传输距离： 500～700m（可视）    1200（空旷） </p>
+            <p class="nav_img">环境条件： 标准工作温度为-25℃～+70℃ </p>
+            <p class="nav_img">极限工作温度：-40℃～+85℃ </p>
+            <p class="nav_img">工作湿度： ≤95% </p>
+            <p class="nav_img">设计寿命: 10年以上 </p>
+            </span>
+			</div>
+			<button type="button"  class="btn btn-default" data-dismiss="modal">返回</button>
+			<div class="clear"></div>
+		</div>
+		<a  id="cp_btn2"><dl>
+				<dt><img src="../image/IS/cp_pic3.png"></dt>
+				<dd>Ⅰ型集中器</dd>
+			</dl></a>
+		<div id="cp_body2" class="show_box">
+			<h3 class="modal-title" >Ⅰ型集中器</h3>
+			<img src="../image/IS/pro_3.jpg">
+			<p style=text-align:justify>
+				Ⅰ型集中器是微功率无线抄表系统主节点，是上行与下行通信的网关。完成主站指令的传送、抄表数据的存储、上传。符合行业、企业相关标准和规范。
+			</p>
+			<!--<div class="clearfix"></div>-->
+			<div class="sm">
+             <span>
+            <h4>特性</h4>
+            <p class="nav_img">支持无线自组网通信。</p>
+          <p class="nav_img">大容量、高可靠、便施工维护、低时延快速组网。</p>
+          <p class="nav_img">同地域部署多个集中器，可同时运行，网络容量大。</p>
+          <p class="nav_img">具有自诊断管理功能，保证集中器的正常运行。</p>
+          <p class="nav_img">支持本地、远程软件升级，支持断点续传功能。</p>
+          <p class="nav_img">实时监控电表状态、实时抄录电表指示数据、记录并存储数据，并对电表数据统计、分析。</p>
+          <p class="nav_img">卓越的电磁兼容性能，能适应电网复杂工作环境。</p>
+          <p class="nav_img">标准化结构设计，符合电力施工规范要求。</p>
+          </span>
+           <span>
+            <h4>技术参数</h4>
+            <p class="nav_img">额定电压： 3×220V/380V ±30%</p>
+            <p class="nav_img">工作频率： 50Hz， -6%～+2%</p>
+            <p class="nav_img">工作电流： 3×1.5（6）A</p>
+            <p class="nav_img">工作温度：  -40℃～+70℃</p>
+            <p class="nav_img">整机功耗： 集中器消耗的视在功率≤15VA、有功功率≤10W</p>
+            <p class="nav_img">工作湿度： ≤95%</p>
+            <p class="nav_img">设计寿命： 10年以上</p>
+            </span>
+			</div>
+			<button type="button"  class="btn btn-default" data-dismiss="modal">返回</button>
+			<div class="clear"></div>
+		</div>
+		<a  id="cp_btn3"><dl>
+				<dt><img src="../image/IS/cp_pic4.png"></dt>
+				<dd>Ⅱ型集中器</dd>
+			</dl></a>
+		<div id="cp_body3" class="show_box">
+			<h3 class="modal-title" >Ⅱ型集中器</h3>
+			<img src="../image/IS/pro_4.jpg">
+			<p style=text-align:justify>
+				Ⅱ型集中器是微功率无线抄表系统主节点，是上行与下行通信的网关。完成主站指令的传送、抄表数据的存储、上传。符合行业、企业相关标准和规范。
+			</p>
+			<!--<div class="clearfix"></div>-->
+			<div class="sm">
+             <span>
+            <h4>特性</h4>
+            <p class="nav_img">性能稳定，可靠，数据存储快速、准确。</p>
+          <p class="nav_img">支持文件压缩、断点续传与远程升级。</p>
+          <p class="nav_img">支持本地Ｕ盘自动升级。</p>
+          <p class="nav_img">支持短信测控与设置。</p>
+          <p class="nav_img">无线自组网通信。</p>
+          <p class="nav_img">卓越的电磁兼容性能，能适应电网复杂工作环境。</p>
+          <p class="nav_img">标准化结构设计，符合电力施工规范要求。</p>
+          </span>
+           <span>
+            <h4>技术参数</h4>
+            <p class="nav_img">额定电压：220V ±20%</p>
+            <p class="nav_img">工作频率：50Hz，-6%～+2%</p>
+            <p class="nav_img">工作温度：-40℃～+70℃</p>
+            <p class="nav_img">工作湿度：≤95%</p>
+            <p class="nav_img">时钟电池：3.6V/1200mAh</p>
+            <p class="nav_img">设计寿命：10年以上</p>
+            <p class="nav_img">日计时误差：小于0.5S</p>
+            </span>
+			</div>
+			<button type="button"  class="btn btn-default" data-dismiss="modal">返回</button>
+			<div class="clear"></div>
+		</div>
+		<a  id="cp_btn4"><dl>
+				<dt><img src="../image/IS/cp_pic5.png"></dt>
+				<dd>Ⅰ型采集器</dd>
+			</dl></a>
+		<div id="cp_body4" class="show_box">
+			<h3 class="modal-title" >Ⅰ型采集器</h3>
+			<img src="../image/IS/pro_5.jpg">
+			<p style=text-align:justify>
+				Ⅰ型采集器是微功率无线抄表系统终端的数据采集设备，具有功能强大、速度快、成功率高、运行稳定、便于运维等特点，是多个智能电能表信息采集的必备产品。
+			</p>
+			<!--	<div class="clearfix"></div>-->
+			<div class="sm">
+             <span>
+            <h4>特性</h4>
+            <p class="nav_img">能够按集中器设置的采集周期自动采集电能表数据。</p>
+          <p class="nav_img">能够分类存储数据，形成总及各费率正向有功电能示值等历史日数据，保存重点用户电能表的最近24小时整点总有功电能数据。</p>
+          <p class="nav_img">能够记录参数变更、抄表失败、终端停/上电等事件。</p>
+          <p class="nav_img">有自测试、自诊断功能，发现终端的部件工作异常有记录。</p>
+          </span>
+           <span>
+            <h4>技术参数</h4>
+            <p class="nav_img">工作电压：220V ±30%</p>
+            <p class="nav_img">工作频率：50Hz，-6%～+2%</p>
+            <p class="nav_img">工作温度：-40℃～+70℃</p>
+            <p class="nav_img">整机功耗：在非通信状态下，采集器消耗的视在功率≤5VA、有功功率≤3W</p>
+            <p class="nav_img">抄表端口：1路RS485总线，可接入1～32 路电能表</p>
+            <p class="nav_img">工作湿度：≤95%</p>
+            <p class="nav_img">设计寿命：10年以上</p>
+            </span>
+			</div>
+			<button type="button"  class="btn btn-default" data-dismiss="modal">返回</button>
+			<div class="clear"></div>
+		</div>
+		<a  id="cp_btn5"><dl>
+				<dt><img src="../image/IS/cp_pic6.png"></dt>
+				<dd>Ⅱ型采集器</dd>
+			</dl></a>
+		<div id="cp_body5" class="show_box">
+			<h3 class="modal-title" >Ⅱ型采集器</h3>
+			<img src="../image/IS/pro_6.jpg">
+			<p style=text-align:justify>
+				Ⅱ型采集器是适用于城镇、农村电表安装相对分散区域的居民用户较少的用电信息采集。采集器作为通信中继，直接转发集中器与电能表间的命令和数据，具有速度快、成功率高、运行稳定、便于运维等特点。
+			</p>
+			<!--<div class="clearfix"></div>-->
+			<div class="sm">
+             <span>
+            <h4>特性</h4>
+            <p class="nav_img">支持互联互通标准协议。</p>
+          <p class="nav_img">实时监控电表状态、实时抄录电表数据。</p>
+          <p class="nav_img">数据传输准确可靠、通信能力强。</p>
+          <p class="nav_img">穿透和绕射能力强，开阔地域单跳覆盖半径超过1500M；具有自动中继功能。</p>
+          <p class="nav_img">支持本地电能表地址自动识别、匹配上报功能。</p>
+          <p class="nav_img">通过RS485总线最多接1～32块电表。</p>
+          <p class="nav_img">标准化结构设计，符合电力施工规范要求。</p>
+          </span>
+           <span>
+            <h4>技术参数</h4>
+            <p class="nav_img">工作电压：220V ±30%</p>
+            <p class="nav_img">工作频率：50Hz，-6%～+2%</p>
+            <p class="nav_img">工作温度：-40℃～+70℃</p>
+            <p class="nav_img">频率范围： 470MHz～510MHz</p>
+            <p class="nav_img">发射功率：≤50mW</p>
+            <p class="nav_img">抄表端口：1路RS485总线，可接入1 ～ 32 路电能表</p>
+            <p class="nav_img">整机功耗：在非通信状态下，采集器消耗的视在功率≤5VA、有功功率≤3W</p>
+            <p class="nav_img">工作湿度：≤95%</p>
+            <p class="nav_img">设计寿命：10年以上</p>
+            </span>
+			</div>
+			<button type="button"  class="btn btn-default" data-dismiss="modal">返回</button>
+			<div class="clear"></div>
+		</div>
+
+	</div>
+</div>
+
+<!-- main end -->
+<!-- footer star -->
+<div class="footer">
+	<div class="width_auto">
+			<span>
+				2015版权所有 PKUTECH
+			</span>
+		<ul>
+			<li><a href="law.html">法律声明</a></li>
+			<li><a href="site_map.html">网站地图</a></li>
+		</ul>
+	</div>
+</div>
+<!-- footer end -->
+
+</body>
+<script>
+	var left_menu = document.getElementById("left_menu").getElementsByTagName("li");
+	for(var i=0; i<left_menu.length;i++){
+		left_menu[i].onclick = function(){
+			for(var i=0; i<left_menu.length;i++){left_menu[i].className ="";}
+			this.className ="in";
+		}
+	}
+</script>
+
+</body>
+</html>

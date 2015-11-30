@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<!--<title>标签旁的小图标-->
+	<link rel="Shortcut Icon" href="../image/favicon.ico" type="resource/img/x-icon"/>
+	<title>北大天公集团</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/all_file.js"></script>
+	<script>
+		window.onload = function(){
+			var btn_id =["al_btn1","al_btn2"]//案例A标签ID
+			var al_body =["al_body1","al_body2"]//案件详细内容ID
+			var position_box = document.getElementById("position_box");
+			var btn_id_list = [];
+			var body_id_list = [];
+			var body_height = document.body.scrollHeight || document.documentElement.scrollHeight;
+			position_box.style.height = body_height + "px";
+			for (var i = 0; i < btn_id.length; i++) {
+				btn_id_list.push(document.getElementById(btn_id[i]))
+				body_id_list.push(document.getElementById(al_body[i]))
+				btn_id_list[i].index = i;
+				btn_id_list[i].onclick = function(){
+					document.body.style.overflowY = "hidden";
+					position_box.style.display = "block"
+					body_id_list[this.index].style.display = "block";
+				}
+				body_id_list[i].getElementsByTagName("button")[0].onclick = position_box.onclick =function(){
+					for (var k = 0; k < btn_id.length; k++) {  body_id_list[k].style.display = "none";}
+					position_box.style.display = "none";
+					document.body.style.overflowY = "auto";
+				}
+			};
+		}
+	</script>
+</head>
+<body>
+<!-- header star -->
+<div class="header">
+	<div class="header_top">
+		<a class="logo" href="../index.html">
+			<img src="../image/logo.png">
+		</a>
+		<ul>
+
+			<li><a href="joinUs_list.html">职位招聘</a></li>
+			<li><a href="contactUs4.html">联系我们</a></li>
+		</ul>
+	</div>
+</div>
+<!-- header end -->
+<!--top-->
+<div class="nav">
+	<div class="nav_menu">
+		<ul  class="nav_list">
+			<li><a href="finance.html">金融行业系统服务</a></li>
+			<li><a href="retail.html">零售流通行业系统服务</a></li>
+			<li><a href="electric.html">智能电网</a></li>
+			<li><a href="pro_environment.html">环境检测系统服务</a></li>
+			<li><a href="aboutUs_groupProflie.html">关于我们</a></li>
+			<!--<li><a class="in"  href="big_date.html">大数据</a></li>-->
+		</ul>
+	</div>
+</div>
+<!-- header end -->
+<!-- main star -->
+<div class="pro_environment bigdate">
+	<div class="pro_header">
+		<div class="header_main">
+			<h2>大数据</h2>
+			<p style=text-align:justify>随着政府和企业日常运营过程中产生的信息数字化和数据化，多种新型线上数据大量产生，IDC的研究表明，2020年全球以电子形式存储的数据量是2009年存储量的40倍，其中企业数据以55%的速度在逐年增长。</p>
+			<p style=text-align:justify>但目前大量的数据沉睡在系统中，若可以进行科学化，规范化、标准化的整理与挖掘，通过专业的管理平台挖掘数据的价值，让数据为政府、企业的管理决策提供关键性信息，明确管理方向及路径，产生智慧效能，成为政府机构和企业面临的重大挑战！</p>
+
+		</div>
+	</div>
+</div>
+<div class="IS">
+	<div class="middle_main">
+    <span style="width:48%;margin-right:4%;float:left;">
+      <h2>大数据仓库支撑平台</h2>
+      <p>大数据仓库支撑平台是基于国际领先的大数据分析理论模型，并融合十余年超过万家客户最佳实践经验，自主推出的大数据分析解决方案。该平台主要面向政府及企业级客户，旨在通过科学化，规范化、标准化、完整的管理分析平台，将用户的结构化及非结构化数据进行统一的管理、分析，挖掘数据价值，让数据为业务发展提供智慧效能。</p>
+      <h4>平台特点：</h4>
+      <p>完善的大数据分析处理平台；</p>
+      <p>所见即所得的拖拽式模型管理；</p>
+      <p>数据流分析；</p>
+      <p>强大的数据融合能力；</p>
+      <p>灵活的数据可视化；</p>
+      <p>完善的数据和视图管理；</p>
+      <p>强大的数据和业务融合能力；</p>
+      <p>多屏/多接口合一；</p>
+      <p>数据安全/保障。</p>
+    </span>
+    <span style="width:48%;float:left;">
+      <h2>金融行业元数据解决方案</h2>
+      <p>随着金融行业信息化建设的发展，已经形成了包括数据仓库、报表平台、风险管理、客户关系管理在内的众多信息系统，为日常经营管理提供着管理与决策支持；但是由于各种原因，同时在信息资源标准体系建设、信息共享、信息资源利用等方面也存在许多不足。基于金融业的信息资源管理现状，金融元数据解决方案帮助金融业完善信息资源管理标准体系、完全实现数据的交换与共享管理机制、有效整合行业信息资源、帮助提升信息资源管理水平、提升数据资产价值。</p>
+      <h4>方案特点：</h4>
+      <p>符元模型管理业界标准；</p>
+      <p>数据源统一管理，元数据自动获取；</p>
+      <p>元数据模块基础功能；</p>
+      <p>提供元数据对外接口服务能力；</p>
+      <p>元数据管理模块可扩展。</p>
+    </span>
+	</div>
+</div>
+<!-- main end -->
+<!-- footer star -->
+<div class="footer">
+	<div class="width_auto">
+			<span>
+				2015版权所有 PKUTECH
+			</span>
+		<ul>
+			<li><a href="law.html">法律声明</a></li>
+			<li><a href="site_map.html">网站地图</a></li>
+		</ul>
+	</div>
+</div>
+<!-- footer end -->
+
+</body>
+</html>

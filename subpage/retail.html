@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<!--<title>标签旁的小图标-->
+	<link rel="Shortcut Icon" href="../image/favicon.ico" type="resource/img/x-icon"/>
+	<link rel="shortcut icon" href="../image/favicon.ico" />
+	<link rel="Bookmark" href="../image/favicon.ico"/>
+	<title>北大天公集团</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/all_file.js"></script>
+	<script>
+		window.onload = function() {
+			var btn_id =["al_btn1","al_btn2","al_btn3","al_btn4"]//案例A标签ID
+			var al_body =["al_body1","al_body2","al_body3","al_body4"]//案件详细内容ID
+			var position_box = document.getElementById("position_box");
+			var btn_id_list = [];
+			var body_id_list = [];
+			var body_height = document.body.scrollHeight || document.documentElement.scrollHeight;
+			position_box.style.height = body_height + "px";
+			for (var i = 0; i < btn_id.length; i++) {
+				btn_id_list.push(document.getElementById(btn_id[i]))
+				body_id_list.push(document.getElementById(al_body[i]))
+				btn_id_list[i].index = i;
+				btn_id_list[i].onclick = function(){
+					document.body.style.overflowY = "hidden";
+					position_box.style.display = "block"
+					body_id_list[this.index].style.display = "block";
+				}
+				body_id_list[i].getElementsByTagName("button")[0].onclick = position_box.onclick =function(){
+					for (var k = 0; k < btn_id.length; k++) {
+						body_id_list[k].style.display = "none";
+					}
+					position_box.style.display = "none";
+					document.body.style.overflowY = "auto";
+				}
+			};
+
+		}
+
+	</script>
+
+</head>
+<body>
+<!-- header star -->
+<div class="header">
+	<div class="header_top">
+		<a class="logo" href="../index.html">
+			<img src="../image/logo.png">
+		</a>
+		<ul>
+
+			<li><a href="joinUs_list.html">职位招聘</a></li>
+			<li><a href="contactUs4.html">联系我们</a></li>
+		</ul>
+	</div>
+</div>
+<!-- header end -->
+<div class="nav">
+	<div class="nav_menu">
+		<ul  class="nav_list">
+			<li><a href="finance.html">金融行业系统服务</a></li>
+			<li><a class="in" href="retail.html">零售流通行业系统服务</a></li>
+			<li><a href="electric.html">智能电网</a></li>
+			<li><a href="pro_environment.html">环境检测系统服务</a></li>
+			<li><a href="aboutUs_groupProflie.html">关于我们</a></li>
+			<!--<li><a href="big_date.html">大数据</a></li>-->
+		</ul>
+	</div>
+</div>
+<div class="pro_environment retail">
+	<div class="pro_header">
+		<div class="header_main">
+			<h2>零售流通行业系统服务</h2>
+			<p style=text-align:justify>PKUTECH研发出“购物中心运营管理系统”。该软件系统是集成富士通集团常年在流通业领域的经验和知识，以及富士通在中国购物中心行业所积累的业务Knowhow，打造的一套面向百货商业、购物中心的运营管理系统。</p>
+		</div>
+	</div>
+</div>
+<div class="IS">
+	<!--<div class="left_sidebar">
+		<ul>
+			<li><a href="finance.html">金融</a></li>
+			<li><a class="in" href="retail.html">零售流通</a></li>
+			<li><a href="electric.html">电力</a></li>
+		</ul>
+	</div>-->
+	<div class="middle_main">
+    <span style="width:40%;margin-right:4%;float:left;">
+      <h3>我们提供的产品和服务</h3>
+      <p>(1) 购物中心运营管理解决方案</p>
+      <p>(2) 电子商务B2B.B2C平台解决方案</p>
+      <p>(3) 物流TMS.WMS系统解决方案</p>
+      <p>(4) CRM系统解决方案</p>
+      <p>(5) 商业智能分析BI解决方案</p>
+      <p>(6) 智能WIFI解决方案</p>
+		<p>(7) 软件平台定制开发服务</p>
+    </span>
+    <span style="width:56%;float:left;">
+      <h3>我们的优势</h3>
+      <h4>我们提供的产品可应用于购物中心运营管理系统、仓库管理系统、停车场系统、餐饮系统、来客计数业务、会员自助服务等。</h4>
+      <p>(1) 实现统一招商，统一营销，统一服务，统一物业管理</p>
+      <p>(2) 覆盖运营管理全体主营业务</p>
+      <p>(3) 完整的招商过程管理</p>
+      <p>(4) 灵活的租金和费用计算模式</p>
+      <p>(5) 灵活的POS收银管理</p>
+    </span>
+		<div class="clear"></div>
+		<h3>成功案例</h3>
+		<a id="al_btn1"><dl>
+				<dt><img src="../image/IS/te_al_pic1.png"></dt>
+				<dd>某大型连锁购物品牌案例</dd>
+			</dl></a>
+		<div id="position_box" class="position_100"></div>
+		<div id="al_body1" class="show_box">
+						<h3 class="modal-title" >某大型连锁购物品牌案例</h3>
+						<h4>系统特点</h4>
+						<p>（1）整个CRM产品需包括其关联单位的应用，CRM架构统一搭建，不限制部署数量，不限制会员数量。</p>
+						<p>（2）项目考虑1000家门店，每家店5人标配的导购标准，总部100人的使用量。</p>
+						<p>（3）项目考虑会员全生命周期、全体系的业务管理及分析，考虑非会员业务的分析融</p>
+
+						<h4>对客户所带来的价值以及本身的价值</h4>
+						<h5>（1）会员管理</h5>
+						<p>包括会员招募管理、会员资料管理、会员等级管理、会员积分管理、会员忠诚度规则管理、会员360°视图、会员生命周期管理等。</p>
+						<h5>（2）会员精准营销管理</h5>
+						<p>包括客户洞察及细分管理、营销计划及预算管理、营销活动管理（针对会员的）、营销沟通管理等。</p>
+						<h5>（3）报表分析管理</h5>
+						<p>对上述两条业务管理内容的综合分析统计，包括但不限于会员忠诚度分析、营销活动分析、会员细分分析、会员行为分析、运营统计报表、CRM KPI指标分解及透视分析、货品分析、产品定位分析、门店分析等。</p>
+						<h5>（4）促销活动管理</h5>
+						<p>需要支持非会员的商家促销，包括品牌统一发起的促销活动及全国商场发起的各种促销活动。</p>
+			<button class="btn btn-default" >返回</button>
+			<div class="clear"></div>
+		</div>
+		<a id="al_btn2"><dl>
+				<dt><img src="../image/IS/te_al_pic2.png"></dt>
+				<dd>某品牌手机网平台案例</dd>
+			</dl></a>
+
+		<div id="al_body2" class="show_box">
+					<h3 class="modal-title" >某品牌手机网平台案例</h3>
+					<p>集团为某移动通信品牌手机网开发B2B\B2C综合电商平台。该软件平台系统涵盖当前电子商务的新潮营销方式，面对普通用户、与网络经销商、与线下销售商，分别提供了有针对性的特色营销平台。</p>
+					<p>
+						(1) 面向普通用户的销售平台。通过会员管理系统，方便用户注册购买产品和增值服务。
+
+					</p>
+					<p>
+						(2) 面向网络经销商的经销商平台。针对有独立B2C商城、天猫店铺或银行分期渠道，并具有手机或配件销售经验的电子商务经销商，提供便捷的产品网络进货平台，适用于大批量的进货与服务购买。
+					</p>
+					<p>
+						(3) 面向线下销售终端的销售平台。针对有独立零售店面、合作营业厅或销售专区专柜，并具有一定规模的实体连锁零售经销商，提供便捷的产品网络进货与发货平台，适用于线下经销商的网络进货购买，实现产品直接抵达终端销售商的便捷销售通道模式。
+
+					</p>
+
+					<h4>对客户所带来的价值以及本身的价值</h4>
+					<h5>（1）会员忠诚度与网站粘性</h5>
+					<p>包括会员资料管理、会员等级管理、会员积分管理、会员订单管理、会员销售解析等。</p>
+					<h5>（2）全方位的营销解析</h5>
+					<p>财务管理，渠道与产品的日、周、月销售统计，综合订单明细、经销商零售率、销售任务达成统计，多方位全面地解析产品营销信息。</p>
+					<h5>（3）商品的返利与价保</h5>
+					<p>通过对销售客户的营销举措，赢得销售客户对平台的向心力与信任。</p>
+					<h5>（4）“一通到底”的订单服务</h5>
+					<p>从用户的购买、生成订单、商品分货、订单拆分、订单发货、订单签收，全程跟踪管理，同时与物流接口对接，保证为用户提供完美的订单流程。</p>
+					<h5>（5）信息推送</h5>
+					<p>使用站内信、手机短信、电子邮件，即时向客户推送平台的最新产品信息、政策服务、订单动态等信息。</p>
+					<h5>（6）促销活动</h5>
+					<p>极具特色的团购、抢拍服务，极大地推动了产品的销售量增长。</p>
+			<button class="btn btn-default" >返回</button>
+			<div class="clear"></div>
+		</div>
+		<a id="al_btn3"><dl>
+				<dt><img src="../image/IS/al_pic1.png"></dt>
+				<dd>物流TMS.WMS系统</dd>
+			</dl></a>
+		<div id="al_body3" class="show_box">
+						<h3 class="modal-title" >物流TMS.WMS系统</h3>
+						<p style=text-align:justify>
+							集团仓储管理解决方案主要是记录并跟踪物料在企业内部物流中的各个环节，帮助企业的物流管理人员对库存物品的入库、出库、移库、盘点、拣货等操作进行全面的控制和管理，有效的利用仓储空间，提高仓库的仓储能力，采用灵活的客户上架/拣取策略，优化物料进出次序，最终提高企业仓库存储空间的利用率和企业物料管理的质量和效率，降低企业成本，提高企业市场竞争力。
+						</p>
+						<h4>系统特点</h4>
+						<p>(1) 通过RFID标签对存储物品进行信息化绑定。</p>
+						<p>(2) 对存储物品的各种信息新型管理，并可以添加保留相应的文档及照片。</p>
+						<p>(3) 对物品的进出进行监控，异常出入时出现报警并保留影像资料。</p>
+						<p>(4) 通过审批流程对敏感物品的处置进行控制。</p>
+						<p>(5) 连接智能存储设备，对物品的存放进行智能管理。</p>
+						<p>(6) 通过手持终端对存放物品进行查找、盘点、和处置。</p>
+						<p>(7) 收集各种数据，形成各种统计报表及曲线分析。</p>
+						<p>(8) 制定用户角色，对用户的权限范围实现管控。</p>
+						<p>(9) 利用U-KEY对系统进行保护，避免无关者进行操作。</p>
+						<button class="btn btn-default" >返回</button>
+			<div class="clear"></div>
+					</div>
+		<a id="al_btn4"><dl>
+				<dt><img src="../image/IS/al_pic1.png"></dt>
+				<dd>软件平台定制开发服务</dd>
+			</dl></a>
+		<div id="al_body4" class="show_box">
+						<h3 class="modal-title" >软件平台定制开发服务</h3>
+						<p>
+							为了构建强大的企业级主数据管理产品，集团加入了主数据管理产品的开发。实现了主数据管理功能覆盖主数据全生命周期管理，部署简单方便，产品功能强大，运行稳定。
+						</p>
+						<h4>对客户所带来的价值以及本身的价值</h4>
+						<h5>(1) 简洁快速的建立数据模型</h5>
+						<p>数据建模，我们向导式的创建模式，能够让用户简洁快速的创建数据模型。</p>
+						<h5>(2) 轻量级的ESB设计理念能够实现快速的系统部署</h5>
+						<p>主数据管理系统和外围系统的对接，我们采取了轻量级的ESB设计理念，能够实现系统快速部署。</p>
+						<h5>(3) 方便的规则管理</h5>
+						<p>对系统中用到的规则，提供编辑界面对其进行维护。</p>
+						<h5>(4) 严密精确的数据质量检查</h5>
+						<p>提供多种分析器，对数据源进行质量检查；提供高准确的模糊排重功能；提供可视化的数据质量趋势分析图等。 </p>
+			<button type="button"  class="btn btn-default" data-dismiss="modal">返回</button>
+			<div class="clear"></div>
+		</div>
+	</div>
+</div>
+<!-- footer star -->
+<div class="footer">
+	<div class="width_auto">
+			<span>
+				2015版权所有 PKUTECH
+			</span>
+		<ul>
+			<li><a href="law.html">法律声明</a></li>
+			<li><a href="site_map.html">网站地图</a></li>
+		</ul>
+	</div>
+</div>
+<!-- footer end -->
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>北大天公集团</title>
+	<!--<title>标签旁的小图标-->
+	<link rel="Shortcut Icon" href="../image/favicon.ico" type="resource/img/x-icon"/>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script src="js/pkutech.js"></script>
+	<script type="text/javascript">
+		function getBrowserInfo()
+		{
+			var agent = navigator.userAgent.toLowerCase() ;
+
+			var regStr_ie = /msie [\d.]+;/gi ;			
+			//IE
+			if(agent.indexOf("msie") > 0){
+				return agent.match(regStr_ie) ;
+			}
+
+		}
+		var browser = getBrowserInfo() ;		
+		if(browser == "msie 6.0;"){
+
+			var i = confirm("你的浏览器版本过低，访问页面将会出现不可预料的错误，请升级浏览器版本或使用别的浏览器！")
+
+			if(i){
+				window.opener=null 
+				window.open("","_blank") 
+				window.close(); 
+			}
+			if(!i){				
+				window.opener=null 
+				window.open("","_blank") 
+				window.close(); 
+
+			}
+
+		}
+</script>
+</head>
+<body class="body">
+	<!-- header star -->
+	<div class="header">
+		<div class="header_top">
+			<a class="logo" href="index.html">
+				<img src="image/logo.png">
+				<img style="display:none" src="image/load.gif">
+			</a>
+			<ul>
+				<!--<li><a href="subpage/aboutUs_groupProflie.html">关于我们</a></li>-->
+				<li><a href="subpage/joinUs_list.html">职位招聘</a></li>
+				<li><a href="subpage/contactUs4.html">联系我们</a></li>
+			</ul>
+		</div>	
+	</div>
+	<!-- header end -->
+	<!-- nav star -->
+	<div class="nav">
+		<div class="nav_menu">
+			<ul class="nav_list">
+				<li><a href="subpage/finance.html">金融行业系统服务</a></li>
+				<li><a href="subpage/retail.html">零售流通行业系统服务</a></li>
+				<li><a href="subpage/electric.html">智能电网</a></li>
+				<li><a href="subpage/pro_environment.html">环境检测系统服务</a></li>
+				<li><a href="subpage/aboutUs_groupProflie.html">关于我们</a></li>
+			</ul>		
+		</div>
+	</div>
+	<!-- header end -->
+	<!-- main star -->
+	<div id="index_main" class="main">
+		<div id="banner_all" class="banner" style="background-repeat: no-repeat;background-position: center 190px;background-image:url(image/load.gif);">
+			<a href="subpage/finance.html">
+				<span>
+					<!-- 金融 -->
+					<img src="image/banner_1.jpg">
+				</span>
+			</a>
+			<a href="subpage/retail.html">
+				<span>
+					<!-- 零售流通 -->
+					<img src="image/banner_2.jpg">
+				</span>
+			</a>
+			<a href="subpage/electric.html">
+				<span>
+					<!-- 电力 -->
+					<img src="image/banner_3.jpg">
+				</span>
+			</a>
+			<a href="subpage/pro_environment.html">
+				<span>
+					<!-- 环保 -->
+					<img src="image/banner_4.jpg">
+				</span>
+			</a>		
+			<a href="subpage/aboutUs_groupProflie.html">
+				<span>
+					<!-- 关于我们 -->
+					<img src="image/banner_7.jpg">
+				</span>
+			</a>		
+		</div>
+		<!-- baaner btn star -->
+		<div id="banner_btn" class="mouse_list pos_y">
+			<a href="#"></a>
+			<a href="#"></a>
+			<a href="#"></a>
+			<a href="#"></a>
+			<a href="#"></a>
+		</div>
+		<!-- baaner btn end -->
+	</div>
+	<!-- main end -->
+	<!-- footer star -->
+	<div class="footer footer_abs">
+		<div class="width_auto">
+			<span>
+				2015版权所有 PKUTECH
+			</span>
+			<ul>
+				<li><a href="subpage/law.html">法律声明</a></li>
+				<li><a href="subpage/site_map.html">网站地图</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- header end -->
+</body>
+
+</html>
